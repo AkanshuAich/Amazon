@@ -1,0 +1,121 @@
+/* styles.css */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    background-color: rgb(234, 237, 237);
+}
+.main {
+    padding: 15px;
+    display: flex;
+}
+@media only screen and (max-width: 1200px) {
+    .main {
+        flex-direction: column;
+    }
+}
+.review-container {
+    background-color: #fff;
+    flex: 0.7;
+    padding: 15px;
+}
+.review-container h2 {
+    font-weight: 500;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 15px;
+}
+.address-container, .payment-container, .order-container {
+    margin-top: 20px;
+}
+.address-container div, .payment-container div {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.address-container p, .payment-container p {
+    font-size: 14px;
+    margin-top: 4px;
+}
+.product {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.product .image {
+    flex: 0.3;
+}
+.product .image img {
+    width: 60%;
+}
+.product .description {
+    flex: 0.7;
+}
+.product .description h4 {
+    font-weight: 600;
+    font-size: 18px;
+}
+.product .description p {
+    font-weight: 600;
+    margin-top: 10px;
+}
+.product .description button {
+    background-color: transparent;
+    color: #1384b4;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.product .description button:hover {
+    text-decoration: underline;
+}
+.subtotal {
+    flex: 0.3;
+    background-color: #fff;
+    margin-left: 15px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@media only screen and (max-width: 1200px) {
+    .subtotal {
+        flex: none;
+        margin-top: 20px;
+    }
+}
+.subtotal p {
+    font-size: 20px;
+}
+.subtotal button {
+    width: 65%;
+    height: 33px;
+    margin-top: 20px;
+    background-color: #ffd814;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+}
+
+/* New styles for card options */
+.card-option {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.card-option input[type="radio"] {
+    margin-right: 10px;
+}
+.card-option .card-details {
+    flex: 1;
+}
+.card-option .card-image {
+    margin-left: 10px;
+}
+.card-option .card-image img {
+    width: 40px;
+    height: auto;
+}

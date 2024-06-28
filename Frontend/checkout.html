@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="checkout.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="navbar"></div>
+        <div class="main">
+            <div class="shopping-cart">
+                <h2>Shopping Cart</h2>
+                <div id="products"></div>
+            </div>
+            <div class="subtotal">
+                <p>Subtotal (<span id="item-count">0</span> items) : <strong id="subtotal-value">₹ 0.00</strong></p>
+                <small>
+                    <input type="checkbox" />
+                    <span>This order contains a gift.</span>
+                </small>
+                <button id="checkout-button"><a href="billing.html">Proceed to checkout</a></button>
+            </div>
+        </div>
+    </div>
+    <script src="checkout.js" type="module"></script>
+</body>
+</html>

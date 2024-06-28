@@ -95,7 +95,7 @@ body {
 .search-container {
     background-color: red;
     margin-left: 25px;
-    width: 700px;
+    width: 720px;
     display: flex;
     height: 40px;
     justify-content: space-between;
@@ -163,13 +163,13 @@ body {
 
 .account {
     font-weight: 900;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .return-order-container {
     width: 65px;
     font-size: 0.9rem;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .return-order-container p {
@@ -187,10 +187,17 @@ body {
 .cart-container {
     font-size: 1.1rem;
     display: flex;
+    padding-left: 50px;
 }
 
 .cart-container i {
     font-size: 1rem;
+    margin-right: 4px;
+}
+
+.cart-container a {
+    text-decoration: none;
+    color: white;
 }
 
 /**************************************navigation*****************************************/

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="billing.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="navbar"></div>
+        <div class="main">
+            <div class="review-container">
+                <h2>Review Your Order</h2>
+                <div class="address-container">
+                    <h5>Shipping Address</h5>
+                    <div id="address"></div>
+                </div>
+                <div class="payment-container">
+                    <h5>Payment Method</h5>
+                    <div>
+                        <p>Card Details</p>
+                        <div id="card-options"></div>
+                    </div>
+                </div>
+                <div class="order-container">
+                    <h5>Your Order</h5>
+                    <div id="products"></div>
+                </div>
+            </div>
+            <div class="subtotal">
+                <p>Subtotal (<span id="item-count">0</span> items) : <strong id="subtotal-value">₹ 0.00</strong></p>
+                <button id="checkout-button">Place Order</button>
+            </div>
+        </div>
+    </div>
+    <script src="billing.js" type="module"></script>
+</body>
+</html>
