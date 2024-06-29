@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = ('css/checkout.css'))}}" />
+</head>
+<body>
+    <main class="main">
+        <section class="checkout_container">
+            <div class="navbar"></div>
+            <div class="main">
+                <div class="shopping-cart">
+                    <h2>Shopping Cart</h2>
+                    <div id="products"></div>
+                </div>
+                <div class="subtotal">
+                    <p>Subtotal (<span id="item-count">0</span> items) : <strong id="subtotal-value">₹ 0.00</strong></p>
+                    <small>
+                        <input type="checkbox" />
+                        <span>This order contains a gift.</span>
+                    </small>
+                    <button id="checkout-button"><a href="{{ url_for('billing')}}">Proceed to checkout</a></button>
+                </div>
+            </div>
+        </section>
+    
+    </main>
+    
+    <script src="{{ url_for('static', filename = ('js/checkout.js'))}}" type="module"></script>
+    
+    
+   
+
+    <div class="container">
+        <div class="chatbox">
+            <div class="chatbox__support">
+                <div class="chatbox__header">
+                    <div class="chatbox__image--header">
+                        <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
+                    </div>
+                    <div class="chatbox__content--header">
+                        <h4 class="chatbox__heading--header">Chat support</h4>
+                        <p class="chatbox__description--header">Hi. My name is Amapay. How can I help you?</p>
+                    </div>
+                </div>
+                <div class="chatbox__messages">
+                    <div></div>
+                </div>
+                <div class="chatbox__footer">
+                    <input type="text" placeholder="Write a message...">
+                    <button class="chatbox__send--footer send__button">Send</button>
+                </div>
+            </div>
+            <div class="chatbox__button">
+                <button><img src="https://static.news.bitcoin.com/wp-content/uploads/2018/04/bitcoin-trading-bot.jpg" alt="image"/></button>
+            </div>
+        </div>
+    </div>
+    
+        <script src="{{ url_for('static', filename = ('js/chatbot.js'))}}" type="module"></script>
+</body>
+</html>

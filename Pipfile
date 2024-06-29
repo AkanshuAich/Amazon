@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+langchain = "*"
+langchain-mistralai = "*"
+langchain-pinecone = "*"
+langchain-community = "*"
+pinecone-client = "*"
+langchainhub = "*"
+python-dotenv = "*"
+tenacity = "==8.3.0"
+pymongo = "*"
+torch = "*"
+pandas = "*"
+plotly = "*"
+flask-caching = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
