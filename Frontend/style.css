@@ -682,22 +682,27 @@ body {
     align-items: center;
     justify-content: center;
     padding: 15px 20px;
+    padding-right: 90px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     box-shadow: var(--primaryBoxShadow);
 }
 
 .chatbox__image--header {
-    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .chatbox__image--header img{
-    width: 40%;
+    width: 50px;
 }
 
 .chatbox__heading--header {
     font-size: 1.2rem;
     color: white;
+}
+.chatbox__content--header {
+    padding-left: 20px;
+    margin-inline-end: 20px;
 }
 
 .chatbox__description--header {
