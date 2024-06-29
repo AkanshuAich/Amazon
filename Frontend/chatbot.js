@@ -31,6 +31,7 @@ class Chatbox {
         // show or hides the box
         if(this.state) {
             chatbox.classList.add('chatbox--active')
+            console.log("1");
         } else {
             chatbox.classList.remove('chatbox--active')
         }
@@ -83,6 +84,11 @@ class Chatbox {
 
         const chatmessage = chatbox.querySelector('.chatbox__messages');
         chatmessage.innerHTML = html;
+    }
+
+    toggleChatbox() {
+        const chatbox = document.querySelector('.chatbox');
+        chatbox.classList.toggle('open');
     }
 }
 

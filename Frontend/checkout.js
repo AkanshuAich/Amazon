@@ -86,7 +86,9 @@ function renderProducts() {
 }
 
 document.getElementById('checkout-button').addEventListener('click', () => {
-  window.location.href = "/address";
+  window.location.href = "billing.html";
 });
 
 renderProducts();
+
+

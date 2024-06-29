@@ -146,7 +146,7 @@ function renderCardOptions() {
     });
 }
 
-document.getElementById('checkout-button').addEventListener('click', () => {
+document.getElementById('order-button').addEventListener('click', () => {
     alert('Order placed successfully!');
     // Logic to handle payment confirmation can be added here
 });
