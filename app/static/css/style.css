@@ -185,9 +185,11 @@ body {
 
 /****cart container***/
 .cart-container {
-    font-size: 1.1rem;
+    /* font-size: 1.1rem; */
     display: flex;
-    padding-left: 50px;
+    border: 1px solid orange;
+    padding: 10px;
+    margin-left: 10px;
 }
 
 .cart-container i {
@@ -196,6 +198,16 @@ body {
 }
 
 .cart-container a {
+    text-decoration: none;
+    color: white;
+}
+
+.dashboard-container{
+    margin-left: 20px;
+    border: 1px solid orange;
+    padding: 10px;
+}
+.dashboard-container a {
     text-decoration: none;
     color: white;
 }

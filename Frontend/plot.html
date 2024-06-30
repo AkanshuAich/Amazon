@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Analysis</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+    <h1>Amazon Spending and Savings Analysis</h1>
+    <label for="yearFilter">Select Year:</label>
+    <select id="yearFilter">
+        <option value="all">All</option>
+    </select>
+
+    <label for="monthFilter">Select Month:</label>
+    <select id="monthFilter">
+        <option value="all">All</option>
+    </select>
+
+    <div id="category-comparison"></div>
+    <div id="monthly-comparison"></div>
+
+    <script src="plot.js"></script>
+</body>
+</html>
