@@ -20,6 +20,7 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="order.css" rel="stylesheet">
 
 </head>
 
@@ -353,50 +354,11 @@
                     </div>
 
                     <!-- Content Row -->
-                    <div id="warning" class="warning">
-                        <strong>Warning:</strong> You have reached 70% of your budget limit.
+                    <div class="card-container">
+                        <!-- Cards will be dynamically inserted here by JavaScript -->
+                         <h2>Your Purchases</h2>
                     </div>
-                    <div class="recommendations">
-                        <div class="recommendation">
-                            <h3>Don't Worry Rishav 😊!!</h3>
-                            <h4>Amazon is here to help you manage the budget and continue your shopping.</h4>
-                            <ul>
-                                <li>You can continue buying products with the Amazon Pay Later feature.</li>
-                        
-                                <li>EMI options available from different banks with varying interest rates:
-                                    <ol>
-                                        <li>HDFC Bank credit card: 6% per annum</li>
-                                        <li>ICICI Bank: 7% per annum</li>
-                                        <li>Axis Bank: 8% per annum</li>
-                                    </ol>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="container mt-5">
-
-                        <h3>Set Budget Limits</h3>
-                        <div class="row mb-3">
-                            <div class="col">
-                                <label for="monthlyBudget" class="form-label">Monthly Budget Limit</label>
-                                <input type="number" class="form-control" id="monthlyBudget" value="10000" min="0" step="100">
-                            </div>
-                            <div class="col">
-                                <label for="yearlyBudget" class="form-label">Yearly Budget Limit</label>
-                                <input type="number" class="form-control" id="yearlyBudget" value="120000" min="0" step="1000">
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <button class="btn btn-primary" id="applyFilters">Apply Filters</button>
-                        </div>
-                        <div class="mb-3">
-                            <button class="btn btn-secondary" id="monthlySpendingsBtn">Monthly Spendings</button>
-                            <button class="btn btn-secondary" id="yearlySpendingsBtn">Yearly Spendings</button>
-                        </div>
-                        <h2 id="chartTitle"></h2>
-                        <canvas id="spendingsChart"></canvas>
-                    </div>
+                    <script src="order.js"></script>
                 <!-- /.container-fluid -->
 
             </div>
