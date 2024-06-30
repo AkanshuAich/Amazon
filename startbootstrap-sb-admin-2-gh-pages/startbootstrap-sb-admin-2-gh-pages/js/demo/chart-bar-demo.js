@@ -29,19 +29,19 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 document.addEventListener('DOMContentLoaded', function () {
   // Selecting elements
   const applyFiltersButton = document.getElementById('applyFilters-1');
-  const yearFilterSelect = document.getElementById('yearFilter');
+  const yearFilterSelect = document.getElementById('yearFilter-1');
 
   // Adding event listener to applyFiltersButton
   applyFiltersButton.addEventListener('click', function () {
     const selectedYear = yearFilterSelect.value;
     // Call updateChart function with selected filters
-    updateChart("myBarChart", selectedYear);
+    updateChartbar("myBarChart", selectedYear);
   });
-
+  updateChartbar("myBarChart", 'all');
 });
 
 // Function to update the chart
-function updateChart(chartId, selectedYear) {
+function updateChartbar(chartId, selectedYear) {
   // Load CSV data using D3
   d3.csv('customer_orders.csv').then(function(data) {
     // Parse the CSV data
@@ -172,4 +172,4 @@ function updateChart(chartId, selectedYear) {
 }
 
 // Call updateChart initially with 'all' filters
-updateChart("myBarChart", 'all');
+

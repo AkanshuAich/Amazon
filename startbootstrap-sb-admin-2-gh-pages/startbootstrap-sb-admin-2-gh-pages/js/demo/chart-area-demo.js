@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Call updateChart function with selected filters
     updateChart('myAreaChart', selectedYear, selectedMonth, 0);
   });
-
+  updateChart('myAreaChart', 'all', 'all', 0);
 });
 
 // Function to update the chart
@@ -197,4 +197,4 @@ function updateChart(chartId, selectedYear, selectedMonth, t) {
 }
 
 // Call updateChart initially with 'all' filters
-updateChart('myAreaChart', 'all', 'all', count);
+

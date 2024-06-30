@@ -20,6 +20,7 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/milestone.css" rel="stylesheet">
 
 </head>
 
@@ -63,13 +64,6 @@
                     <i class="fas fa-shopping-cart"></i>
                     <span>Orders</span>
                 </a>
-                <!-- <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="buttons.html">Buttons</a>
-                        <a class="collapse-item" href="cards.html">Cards</a>
-                    </div>
-                </div> -->
             </li>
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
@@ -77,13 +71,6 @@
                     <i class="far fa-money-bill-alt"></i>
                     <span>EMIs</span>
                 </a>
-                <!-- <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="buttons.html">Buttons</a>
-                        <a class="collapse-item" href="cards.html">Cards</a>
-                    </div>
-                </div> -->
             </li>
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
@@ -91,13 +78,6 @@
                     <i class="fa fa-briefcase"></i>
                     <span>Budget Manager</span>
                 </a>
-                <!-- <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="buttons.html">Buttons</a>
-                        <a class="collapse-item" href="cards.html">Cards</a>
-                    </div>
-                </div> -->
             </li>
 
             <!-- Divider -->
@@ -276,7 +256,7 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                 Spendings (Monthly)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">₹ 40,000</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">₹ 5000</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -294,7 +274,7 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                                 Spendings (Annual)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">₹ 2,00,000</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">₹ 60,000</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -358,7 +338,7 @@
 
                         <!-- Area Chart -->
                         <div class="col-xl-8 col-lg-7">
-                            <div class="card shadow mb-4">
+                            <div class="card shadow mb-4" id = "card-1">
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -413,7 +393,30 @@
                                     </div>
                                 </div>
                             </div>
+
+                                <!-- Bar Chart -->
+                                <div class="card shadow mb-4" id="card-2">
+                                    <div class="card-header py-3">
+                                        <h6 class="m-0 font-weight-bold text-primary">Monthly Spendings and Savings</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="filters-container">
+                                            <label for="yearFilter">Select Year:</label>
+                                            <select id="yearFilter-1" class="filter-select">
+                                              <option value="all">All Years</option>
+                                              <option value="2023">2023</option>
+                                              <option value="2024">2024</option>
+                                            </select>
+                                            <button id="applyFilters-1" class="filter-button">Apply Filters</button>
+                                          </div>
+                                        <div class="chart-bar">
+                                            <canvas id="myBarChart"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+    
                         </div>
+                        
 
                         <!-- Pie Chart -->
                         <div class="col-xl-4 col-lg-5">
@@ -439,65 +442,29 @@
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <canvas id="myPieChart"></canvas>
-                                    </div>
-                                    <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> Direct
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-success"></i> Social
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> Referral
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        <!-- Content Column -->
-                        <!-- <div class="col-lg-6 mb-4"> -->
-
-                            <div class="col-xl-8 col-lg-7">
-    
-                                <!-- Bar Chart -->
-                                <div class="card shadow mb-4">
-                                    <div class="card-header py-3">
-                                        <h6 class="m-0 font-weight-bold text-primary">Monthly Spendings and Savings</h6>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="filters-container">
-                                            <label for="yearFilter">Select Year:</label>
-                                            <select id="yearFilter" class="filter-select">
-                                              <option value="all">All Years</option>
-                                              <option value="2023">2023</option>
-                                              <option value="2024">2024</option>
-                                            </select>
-                                            <button id="applyFilters-1" class="filter-button">Apply Filters</button>
-                                          </div>
-                                        <div class="chart-bar">
-                                            <canvas id="myBarChart"></canvas>
+                                    <div class="progress-container">
+                                        <div class="progress-bar">
+                                          
                                         </div>
+                                        <div class="progress-indicator" id="progress-indicator"></div>
+                                        <div class="milestones">
+                                          <div class="milestone" data-step="1" id="card1"><div class="bold" id="bold1"> 4th milestone : ₹ 100000</div>
+                                           <div class="content">Prime membership of 1 year at Amazon Prime Video.<br><span class="checkmark">&#10003;</span> <span class="prime-logo">Prime</span>
+                                             : 6 months extension + 10000 gift vouchers</div><button class="updateStepButton" id="button1">Claim</button></div>
+                                          <div class="milestone" data-step="2" id="card1"><div class="bold" id="bold1"> 3rd milestone : ₹ 80000</div>
+                                          <div class="content">Upto Rs 10000 gift vouchers on seasonal sales and exciting brands.<br> <span class="checkmark">&#10003;</span> <span class="prime-logo">Prime</span> : + 3 months Amazon Prime Video</div><button class="updateStepButton" id="button1">Claim</button> </div>
+                                          <div class="milestone" data-step="3" id="card3"><div class="bold" id="bold2"> 2nd milestone : ₹ 60000</div>
+                                          <div class="content">Prime membership of 5 months on groceries at Amazon fresh and Whole Foods Market.<br> <span class="checkmark">&#10003;</span> <span class="prime-logo">Prime</span> : 5000 gift vouchers + 2 months Amazon Music</div><button class="updateStepButton" id="button2">Claim</button></div>
+                                          <div class="milestone" data-step="4" id="card3"><div class="bold" id="bold2"> 1st milestone : ₹ 30000</div>
+                                          <div class="content">Free Subscription of 3 months at Amazon Music.<br> <span class="checkmark">&#10003;</span> <span class="prime-logo">Prime</span> : 2 months of Amazon fresh.</div><button class="updateStepButton" id="button2">Claim</button></div>
+                                        </div>                                
                                     </div>
-                                </div>
-    
                             </div>
-    
-                        <div class="col-lg-6 mb-4">
-
-                            
                         </div>
                     </div>
-
                 </div>
                 <!-- /.container-fluid -->
-
+            </div>
             </div>
             <!-- End of Main Content -->
 
@@ -510,11 +477,10 @@
                 </div>
             </footer>
             <!-- End of Footer -->
-
+        </div>
+        
         </div>
         <!-- End of Content Wrapper -->
-
-    </div>
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
@@ -556,9 +522,10 @@
     <script src="vendor/chart.js/Chart.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-bar-demo.js"></script>
+    <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="js/demo/milestone.js"></script>
 
 </body>
 
