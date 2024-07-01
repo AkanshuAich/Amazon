@@ -65,6 +65,7 @@ async def async_agent_call(user_needs, user_attributes, user_type, question):
         **Response Guidelines**:
         - Tailor responses based on the user's profile.
         - Provide clear, concise, and helpful information.
+        - Keep the responses short and clear to the customers.
         - Structure responses with bullet points for clarity and ease of reading.
         - Keep conversations brief and to the point.
         - Format text with clear spacing to ensure readability.

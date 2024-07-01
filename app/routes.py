@@ -9,7 +9,7 @@ import asyncio
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'ChatBot')))
 
 import Info
-
+import Billing
 # @cache.memoize(timeout=600)
 # def fetch(user_1, user_2, user_3, user_4):
 #     return user_1, user_2, user_3, user_4
@@ -63,43 +63,5 @@ def chatbot():
 
 @app.route('/option', methods=['POST'])
 def chat_endpoint():
-    list_option = [
-        {
-            "id": 1,
-            "name": "Cash on Delivery/Pay on Delivery",
-            "details": "Cash, UPI and Cards accepted. know more",
-            "image": "https://i.ibb.co/nR46L2y/indian-rupee.png"
-        },
-        {
-            "id": 2,
-            "name": "Amazon Pay UPI",
-            "details": "State Bank of India **2278",
-            "image": "https://www.shutterstock.com/image-vector/amazon-pay-logo-biggest-online-600w-2360491029.jpg"
-        },
-        {
-            "id": 3,
-            "name": "Other UPI Apps",
-            "details": "Google Pay, PhonePe, Paytm and more",
-            "image": "https://cdn.icon-icons.com/icons2/2699/PNG/512/upi_logo_icon_170312.png"
-        },
-        {
-            "id": 4,
-            "name": "Credit or debit card",
-            "details": "",
-            "image": "https://cdn.iconscout.com/icon/premium/png-256-thumb/card-payment-star-9319049-7601932.png"
-        },
-        {
-            "id": 5,
-            "name": "EMI",
-            "details": "",
-            "image": "https://www.shutterstock.com/shutterstock/photos/2443921359/display_1500/stock-vector-emi-calculator-with-percentage-sign-icon-as-eps-file-2443921359.jpg"
-        },
-        {
-            "id": 6,
-            "name": "Net Banking",
-            "details": "",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShaR-ZCWiGo7Z0xZRkrskeXNTLo1_mvYv32Q&s"
-        }
-    ]
-
-    return jsonify({'options': list_option})
+    response = Billing.bill()
+    return jsonify({'options': response})

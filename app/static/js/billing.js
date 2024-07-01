@@ -150,21 +150,58 @@ function renderProducts() {
 
 function renderCardOptions(cardOptions) {
     const cardOptionsContainer = document.getElementById('card-options');
+    const cardOptionsContainer2 = document.getElementById('card-options-no');
     cardOptionsContainer.innerHTML = '';
     cardOptions.forEach(card => {
-        const cardDiv = document.createElement('div');
-        cardDiv.classList.add('card-option');
-        cardDiv.innerHTML = `
-            <input type="radio" name="card" value="${card.id}">
-            <div class="card-details">
-                <p>${card.name}</p>
-                <p>${card.details}</p>
-            </div>
-            <div class="card-image">
-                <img src="${card.image}" alt="${card.name}">
-            </div>
-        `;
-        cardOptionsContainer.appendChild(cardDiv);
+        if(card.recommended==="yes"){
+            const cardDiv = document.createElement('div');
+            cardDiv.classList.add('card-option');
+
+            let inputString = card.name;
+            let output1 = "";
+            let output2 = "";
+            // Split the string by the first occurrence of " "
+            let firstSpaceIndex = inputString.indexOf(" ");
+            let firstPart = inputString.substring(0, firstSpaceIndex); // "credit"
+
+            if(firstPart==="Credit"){
+                let secondPart = inputString.substring(firstSpaceIndex + 6); // "card HSBC credit card"
+
+                // Construct the desired outputs
+                output1 = firstPart.charAt(0).toUpperCase() + firstPart.slice(1) + " card"; // "Credit card"
+                output2 = secondPart.charAt(0).toUpperCase() + secondPart.slice(1); // "HSBC credit card"
+            }else{
+                output1 = card.name;
+            }
+
+
+            cardDiv.innerHTML = `
+                <input type="radio" name="card" value="${card.id}">
+                <div class="card-details">
+                    <b><p>${output1}</p></b>
+                    <p>${output2}</p>
+                    <p>${card.details}</p>
+                </div>
+                <div class="card-image">
+                    <img src="${card.image}" alt="${card.name}">
+                </div>
+            `;
+            cardOptionsContainer.appendChild(cardDiv);
+        }else{
+            const cardDiv2 = document.createElement('div');
+            cardDiv2.classList.add('card-option-no');
+            cardDiv2.innerHTML = `
+                <input type="radio" name="card" value="${card.id}">
+                <div class="card-details">
+                    <b><p>${card.name}</p></b>
+                    <p>${card.details}</p>
+                </div>
+                <div class="card-image">
+                    <img src="${card.image}" alt="${card.name}">
+                </div>
+            `;
+            cardOptionsContainer2.appendChild(cardDiv2);
+        }
     });
 }
 

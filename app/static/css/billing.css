@@ -119,6 +119,31 @@
     width: 40px;
     height: auto;
 }
+.card-option-no {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.card-option-no input[type="radio"] {
+    margin-right: 10px;
+}
+.card-option-no .card-details {
+    flex: 1;
+}
+.card-option-no .card-image {
+    margin-left: 10px;
+}
+.card-option-no .card-image img {
+    width: 40px;
+    height: auto;
+}
+.method h3{
+  color: rgba(0, 0, 0, 0.6)
+}
 
 * {
     box-sizing: border-box;
