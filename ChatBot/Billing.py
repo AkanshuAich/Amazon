@@ -2,7 +2,9 @@
 import pandas as pd
 # Product Link : https://www.amazon.in/Dell-Alienware-x14-R2-i7-13620H/dp/B0C4ZP6QX5?th=1
 # Product details
-list_option = [
+
+def bill():
+    list_option = [
         {
             "id": 9,
             "name": "Cash on Delivery/Pay on Delivery",
@@ -40,7 +42,6 @@ list_option = [
         }
     ]
 
-def bill():
     product_price = 159389
 
     # Create the DataFrame
