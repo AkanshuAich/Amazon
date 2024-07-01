@@ -1,0 +1,96 @@
+.card-container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.card-amazon {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+    width: auto;
+    box-sizing: border-box;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+
+.product-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 5px;
+    overflow: hidden;
+}
+
+.product-details {
+    flex: 1;
+}
+
+.price {
+    color: green;
+    font-weight: bold;
+}
+
+.tag {
+    border-style: dashed;
+    border-color: orange;
+    background-color: rgb(244, 203, 156);
+    color: black;
+    width: 150px;
+    padding-left: 10px;
+}
+
+.yellow-tag {
+    background-color: yellow;
+    padding: 3px 5px;
+    border-radius: 5px;
+    color: green;
+}
+
+.suggestions {
+    width: auto;
+    box-sizing: border-box;
+    padding-left: 20px;
+    margin-right: 60x;
+    border-left: 4px solid black;
+    background-color: rgba(75, 192, 192, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.suggestions h3 {
+    margin: 0 0 10px 0;
+    color: rgba(0,0,0, 0.7);
+}
+
+.suggestions ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: rgba(0,0,0, 0.6);
+}
+
+.suggestions ul li {
+    margin-bottom: 10px;
+}
+
+.buy-again, .buy-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ffa41c;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.buy-again:hover, .buy-button:hover {
+    background-color: #f9711d;
+}

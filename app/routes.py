@@ -26,6 +26,22 @@ def checkout():
 def billing():
     return render_template("billing.html")
 
+@app.route("/dashboard")
+def dashboard():
+    return render_template("dash.html")
+
+@app.route("/order")
+def order():
+    return render_template("order.html")
+
+@app.route("/emi")
+def emi():
+    return render_template("emi.html")
+
+@app.route("/budget")
+def budget():
+    return render_template("budget.html")
+
 @app.route("/chat", methods=['POST'])
 def chatbot():
     global user_info_1, user_info_2, user_info_3, user_info_4

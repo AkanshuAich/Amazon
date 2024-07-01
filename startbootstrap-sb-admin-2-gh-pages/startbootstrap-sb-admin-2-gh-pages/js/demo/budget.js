@@ -68,8 +68,11 @@ document.addEventListener('DOMContentLoaded', function () {
         d3.csv('customer_orders.csv').then(data => {
             data.forEach(d => {
                 d['Price for Customer'] = +d['Price for Customer'];
-                d['Order Year'] = d['Order Date'].split('-')[0];
-                d['Order Month'] = d['Order Date'].split('-')[1];
+                const date = new Date(d['Order Date']);
+                if (!isNaN(date)) {
+                    d['Order Year'] = date.getFullYear(); // Correctly parse the year
+                    d['Order Month'] = date.getMonth() + 1; // Correctly parse the month
+                }
             });
 
             if (filterType === 'monthly') {
@@ -77,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     data,
                     v => d3.sum(v, d => d['Price for Customer']),
                     d => d['Order Month']
-                ).map(([key, value]) => ({ month: key, amount: value }));
+                ).map(([key, value]) => ({ month: key, amount: value })).filter(d => !isNaN(d.month));
 
                 // Map month numbers to month names
                 const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -97,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     data,
                     v => d3.sum(v, d => d['Price for Customer']),
                     d => d['Order Year']
-                ).map(([key, value]) => ({ year: key, amount: value }));
+                ).map(([key, value]) => ({ year: key, amount: value })).filter(d => !isNaN(d.year));
 
                 yearlySpendings.sort((a, b) => a.year - b.year);
 
